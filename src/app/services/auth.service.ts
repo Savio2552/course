@@ -17,10 +17,6 @@ export class AuthService {
       }
     })
   }
-
- 
-   
-  
   signWithGoogle(){
     return this.afs.signInWithPopup(new GoogleAuthProvider())
   }
