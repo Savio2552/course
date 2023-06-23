@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Faça login<br>Escreva, pratique, aprimore!</h1>
+      <img src="../../../assets/inlustreitor.svg" class="left-login-image" alt="Pessoa trabalhando">
+    </div>
+    <div class="right-login">
+      <div class="card-login" [formGroup]="myForm">
+        <h1>LOGIN</h1>
+      
+        <div class="textfield">
+          <label for="usuario">Usuário</label>
+          <input formControlName="username" type="text" name="usuario" placeholder="Usuário">
+        </div>
+        <div class="textfield">
+          <label for="password">Senha</label>
+          <input formControlName="password" type="password" name="password" placeholder="Senha">
+        </div>
+
+        <button (click)="loginWithEmailAndPassword()" class="btn-login">Login</button>
+        <button (click)="loginWithGoogle()" class="btn-login">Login com google</button>
+        <a style="color: white;" routerLink="/register">SignUp
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

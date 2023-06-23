@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  <div class="main-login">
+    <div class="left-login">
+      <h1>Faça login<br>Escreva, pratique, aprimore!</h1>
+      <img src="../../../assets/inlustreitor.svg" class="left-login-image" alt="Pessoa trabalhando">
+    </div>
+    <div class="right-login">
+      <div class="card-login" [formGroup]="myForm">
+        <h1>REGISTER
+        </h1>
+        <div class="textfield">
+          <label for="usuario">Email</label>
+          <input formControlName="email"  type="email" name="usuario" placeholder="Usuário">
+        </div>
+        <div class="textfield">
+            <label for="password">Name</label>
+            <input formControlName="name"  type="text" name="password" placeholder="Senha">
+        </div>
+        <div class="textfield">
+            <label for="password">Senha</label>
+            <input formControlName="password"  type="password" name="password" placeholder="Senha">
+          </div>
+        <div class="textfield">
+          <label for="password">Confirmar senha</label>
+          <input formControlName="confirmPassword" type="password" name="password" placeholder="Senha">
+        </div>
+        <button (click)="registerWithEmailAndPassword()" class="btn-login">Register</button>
+        <a style="color: white;" routerLink="/">SignIn
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
